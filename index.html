@@ -1,148 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Harmony</title>
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="css/bootstrap4-retro.min.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/custom.css" />
 
     <!-- Firebase CDN -->
     <script src=" https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js "></script>
-    <link
-      type="text/css "
-      rel="stylesheet "
-      href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css "
-    />
-  </head>
+    <link type="text/css " rel="stylesheet " href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css " />
+</head>
 
-  <body>
+<body>
     <div class="bg-danger navbar-dark text-white">
-      <div class="container">
-        <nav class="navbar px-0 navbar-expand-lg navbar-dark">
-          <button
-            class="navbar-toggler"
-            type="button "
-            data-toggle="collapse "
-            data-target="#navbarNavAltMarkup "
-            aria-controls="navbarNavAltMarkup "
-            aria-expanded="false "
-            aria-label="Toggle navigation "
-          >
+        <div class="container">
+            <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button " data-toggle="collapse " data-target="#navbarNavAltMarkup " aria-controls="navbarNavAltMarkup " aria-expanded="false " aria-label="Toggle navigation ">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup ">
-            <div class="navbar-nav">
-              <a href="index.html " class="pl-md-0 p-3 text-white">Start</a>
-              <a href="app.html " class="p-3 text-decoration-none text-white">App example</a>
-              <a href="form.html " class="p-3 text-decoration-none text-white">Form example</a>
-            </div>
-          </div>
-          <button class="fa-sign-in-alt ">Sign in</button>
-        </nav>
-      </div>
-    </div>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup ">
+                    <div class="navbar-nav">
+                        <a href="index.html " class="pl-md-0 p-3 text-white">Start</a>
+                        <a href="app.html " class="p-3 text-decoration-none text-white">App example</a>
+                        <a href="form.html " class="p-3 text-decoration-none text-white">Form example</a>
+                    </div>
+                </div>
+            </nav>
+            <input type="button" class="fa-sign-in-alt" onclick=js/onSignIn value="Google Sign In " />
 
-    <div class="jumbotron bg-secondary text-center text-danger mb-0 radius-0">
-      <div class="container">
-        <div class="ht-tm-header">
-          <h1 class="display-1 display-xxl text-uppercase">Harmony</h1>
-          <span class="lead">Connect With Friends via Tunes</span>
-
-          <div class="mt-4">
-            <a href="#! " class="btn btn-danger btn-lg m-2 text-secondary">
-              <span>A Button</span>
-            </a>
-            <a
-              href="#! "
-              target="_blank "
-              class="btn btn-danger text-secondary btn-lg m-2"
-            >
-              <span>Another Button</span>
-            </a>
-          </div>
         </div>
-      </div>
     </div>
 
-    <div class="container py-5">
-      <h1>Thanks</h1>
+    <div class="jumbotron bg-secondary text-center text-danger mb-0 radius-0 ">
+        <div class="container ">
+            <div class="ht-tm-header ">
+                <h1 class="display-1 display-xxl text-uppercase ">Harmony</h1>
+                <span class="lead ">Connect With Friends via Tunes</span>
 
-      <p>Thank you</p>
+                <div class="mt-4 ">
+                    <a href="#! " class="btn btn-danger btn-lg m-2 text-secondary ">
+                        <span>A Button</span>
+                    </a>
+                    <a href="#! " target="_blank " class="btn btn-danger text-secondary btn-lg m-2 ">
+                        <span>Another Button</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5 ">
+        <h1>Thanks</h1>
+
+        <p>Thank you</p>
     </div>
     <div>
-      <meta name="google-signin-scope " content="profile email " />
-      <meta
-        name="google-signin-client_id "
-        content="944447869176-ehcjd7fqkq2298j0h7mqffqk12c7p733.apps.googleusercontent.com "
-      />
-      <script
-        src="https://apis.google.com/js/platform.js "
-        async
-        defer
-      ></script>
-      <div
-        class="g-signin2"
-        data-onsuccess="onSignIn "
-        data-theme="dark "
-      ></div>
-      <script>
-        function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log("Full Name: " + profile.getName());
-          console.log("Given Name: " + profile.getGivenName());
-          console.log("Family Name: " + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
+        <meta name="google-signin-scope " content="profile email " />
+        <meta name="google-signin-client_id " content="944447869176-ehcjd7fqkq2298j0h7mqffqk12c7p733.apps.googleusercontent.com " />
+        <script src="https://apis.google.com/js/platform.js " async defer></script>
+        <div class="g-signin2 " data-onsuccess="onSignIn " data-theme="dark "></div>
+        <script>
+            function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                console.log("Full Name: " + profile.getName());
+                console.log("Given Name: " + profile.getGivenName());
+                console.log("Family Name: " + profile.getFamilyName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
 
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script>
+                // The ID token you need to pass to your backend:
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+            }
+        </script>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js "
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
-      crossorigin="anonymous "
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "
-      crossorigin="anonymous "
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
-      crossorigin="anonymous "
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
     <!-- Import Firebase -->
     <script src="js/FireBase.js "></script>
-  </body>
+</body>
+
 </html>
