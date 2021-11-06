@@ -2,7 +2,7 @@
 class DB {
 
         private static function connect() {
-                $pdo = new PDO('mysql:host=localhost;dbname=SocialNetwork;charset=utf8', 'root', 'root');
+                $pdo = new PDO('mysql:host=localhost;dbname=HarmonyDB;charset=utf8', 'root', 'h@rmony123');
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $pdo;
         }
