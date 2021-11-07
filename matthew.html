@@ -168,8 +168,8 @@
                                         <div class="d-flex align-items-center">
                                             <img class="img-xs rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
                                             <div class="ml-2">
-                                                <p>Matthew Caplovitz</p>
-                                                <p class="tx-11 text-muted">1 min ago</p>
+                                                <p>Matthew Caplovitz - started listening to:</p>
+                                                <p class="tx-11 text-muted">1 min ago on Spotify</p>
                                             </div>
                                         </div>
                                         <div class="dropdown">
@@ -211,53 +211,56 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <button id="togglePlay">Toggle Play</button>
+                                    <iframe src="https://open.spotify.com/embed/track/2R711v6UpsgYvDuzCJ1iSl?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+                                    <!-- <button id="togglePlay">Toggle Play</button>
                                     <script>
                                         window.onSpotifyWebPlaybackSDKReady = () => {
-                                                const token = '[My access token]';
-                                                const player = new Spotify.Player({
-                                                    name: 'Web Playback SDK Quick Start Player',
-                                                    getOAuthToken: cb => {
-                                                        cb(BQBfq4fTSJb0zE5UGvGiiUXE80muI46HQVHa2neMUZMmf6ogp7wqGD2os6SOTXUreYIxDwwN3k_r3hyxoq63VI6OtA2R1ZEXieUZIVIj7QaMbeak1zKsucWUoH4bmtzHRgQQoxGaubVIaig4XHASegsfMPMDcuw3zA);
-                                                    },
-                                                    volume: 0.5
-                                                });
-                                                / Ready
-                                                player.addListener('ready', ({
-                                                    device_id
-                                                }) => {
-                                                    console.log('Ready with Device ID', device_id);
-                                                });
+                                            const token = '[My access token]';
+                                            const player = new Spotify.Player({
+                                                name: 'Web Playback SDK Quick Start Player',
+                                                getOAuthToken: cb => {
+                                                    cb(BQBfq4fTSJb0zE5UGvGiiUXE80muI46HQVHa2neMUZMmf6ogp7wqGD2os6SOTXUreYIxDwwN3k_r3hyxoq63VI6OtA2R1ZEXieUZIVIj7QaMbeak1zKsucWUoH4bmtzHRgQQoxGaubVIaig4XHASegsfMPMDcuw3zA);
+                                                },
+                                                volume: 0.5
+                                            });
+                                            Ready
+                                            player.addListener('ready', ({
+                                                device_id
+                                            }) => {
+                                                console.log('Ready with Device ID', device_id);
+                                            });
 
-                                                // Not Ready
-                                                player.addListener('not_ready', ({
-                                                    device_id
-                                                }) => {
-                                                    console.log('Device ID has gone offline', device_id);
-                                                });
-                                                player.addListener('initialization_error', ({
-                                                    message
-                                                }) => {
-                                                    console.error(message);
-                                                });
+                                            // Not Ready
+                                            player.addListener('not_ready', ({
+                                                device_id
+                                            }) => {
+                                                console.log('Device ID has gone offline', device_id);
+                                            });
+                                            player.addListener('initialization_error', ({
+                                                message
+                                            }) => {
+                                                console.error(message);
+                                            });
 
-                                                player.addListener('authentication_error', ({
-                                                    message
-                                                }) => {
-                                                    console.error(message);
-                                                });
+                                            player.addListener('authentication_error', ({
+                                                message
+                                            }) => {
+                                                console.error(message);
+                                            });
 
-                                                player.addListener('account_error', ({
-                                                    message
-                                                }) => {
-                                                    console.error(message);
-                                                });
-                                                player.connect();
-                                                document.getElementById('togglePlay').onclick = function() {
-                                                    player.togglePlay();
-                                                };
-                                    </script>
-                                    <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                                            player.addListener('account_error', ({
+                                                message
+                                            }) => {
+                                                console.error(message);
+                                            });
+                                            player.connect();
+                                            document.getElementById('togglePlay').onclick = function() {
+                                                player.togglePlay();
+                                            };
+                                        }
+                                    </script> -->
+
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex post-actions">
@@ -335,7 +338,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <p class="mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p class="mb-3 tx-14">Yo check out the song Hit em Where it Hurts by Paw Paw Rod.</p>
+                                    <iframe src="https://open.spotify.com/embed/track/7888F1QWPTn4cPbuknNV4T?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                                     <img class="img-fluid" src="../../../assets/images/sample2.jpg" alt="">
                                 </div>
                                 <div class="card-footer">
@@ -366,6 +370,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- middle wrapper end -->
                 <!-- right wrapper start -->
                 <div class="d-none d-xl-block col-xl-3 right-wrapper">
