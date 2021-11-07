@@ -230,3 +230,7 @@ img {
 .flex{
     display: flex;
 }
+
+.same-width{
+    width: 34%;
+}
