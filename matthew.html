@@ -159,6 +159,7 @@
                     </div>
                 </div>
                 <!-- left wrapper end -->
+
                 <!-- middle wrapper start -->
                 <div class="col-md-8 col-xl-6 middle-wrapper">
                     <div class="row">
@@ -212,7 +213,52 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <p class="mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus minima delectus nemo unde quae recusandae assumenda.</p>
+                                    <button id="togglePlay">Toggle Play</button>
+                                    <script>
+                                        window.onSpotifyWebPlaybackSDKReady = () => {
+                                                const token = '[My access token]';
+                                                const player = new Spotify.Player({
+                                                    name: 'Web Playback SDK Quick Start Player',
+                                                    getOAuthToken: cb => {
+                                                        cb(BQBfq4fTSJb0zE5UGvGiiUXE80muI46HQVHa2neMUZMmf6ogp7wqGD2os6SOTXUreYIxDwwN3k_r3hyxoq63VI6OtA2R1ZEXieUZIVIj7QaMbeak1zKsucWUoH4bmtzHRgQQoxGaubVIaig4XHASegsfMPMDcuw3zA);
+                                                    },
+                                                    volume: 0.5
+                                                });
+                                                / Ready
+                                                player.addListener('ready', ({
+                                                    device_id
+                                                }) => {
+                                                    console.log('Ready with Device ID', device_id);
+                                                });
+
+                                                // Not Ready
+                                                player.addListener('not_ready', ({
+                                                    device_id
+                                                }) => {
+                                                    console.log('Device ID has gone offline', device_id);
+                                                });
+                                                player.addListener('initialization_error', ({
+                                                    message
+                                                }) => {
+                                                    console.error(message);
+                                                });
+
+                                                player.addListener('authentication_error', ({
+                                                    message
+                                                }) => {
+                                                    console.error(message);
+                                                });
+
+                                                player.addListener('account_error', ({
+                                                    message
+                                                }) => {
+                                                    console.error(message);
+                                                });
+                                                player.connect();
+                                                document.getElementById('togglePlay').onclick = function() {
+                                                    player.togglePlay();
+                                                };
+                                    </script>
                                     <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
                                 </div>
                                 <div class="card-footer">
@@ -504,7 +550,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </body>
 
 </html>
