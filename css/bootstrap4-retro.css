@@ -350,6 +350,12 @@ h6, .h6 {
   font-weight: 200;
   line-height: 1.2; }
 
+.display-5{
+  font-size: 1.0rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
