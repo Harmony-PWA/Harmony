@@ -250,3 +250,11 @@ img {
     object-fit: cover;
     object-position: 20% 35%;
 }
+
+.cropped-john{
+    width: 200px; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+    object-position: 10% 30%;
+
+}
