@@ -234,3 +234,11 @@ img {
 .same-width{
     width: 34%;
 }
+
+.padding{
+    margin-right: 2em;
+}
+
+.height{
+    width: 315px;
+    height: 315px;
