@@ -265,3 +265,12 @@ img {
     object-fit: cover;
     object-position: 10% 45%; 
 }
+
+.resize{
+    /* max-width:100%;
+    height:auto; */
+    /* object-fit: contain; */
+    display: block;
+    width: 440px;
+    height: 520px;
+}
